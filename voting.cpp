@@ -60,7 +60,7 @@ public:
 
         std::copy(_votes.cbegin(), _votes.cend(), std::back_inserter(v));
 
-        std::sort(v.begin(), v.end(), [](const vote_result & left, const vote_result & right) { return left.second >= right.second; });
+        std::sort(v.begin(), v.end(), [](const vote_result & left, const vote_result & right) { return left.second > right.second; });
 
         return v;
     }
